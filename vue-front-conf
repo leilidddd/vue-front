@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name 39.107.51.58;
+    location / {
+        root /usr/share/niginx/html;
+        index index.html index htm;
+        try_files $uri $uri/ /index.html;
+    }
+    location /api {
+        proxy_pass http://39.107.51.5:3000;
+    }
+}

@@ -1,7 +1,7 @@
 <template>
 <ul>
   <li v-for="(user) in users" :key="user.name">
-    {{user.name}}
+    {{user.name}}:{{user.value}}
   </li>
 </ul>
 </template>
